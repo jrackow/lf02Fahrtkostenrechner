@@ -1,6 +1,5 @@
 ﻿    bool temp = false;
-
-    Console.WriteLine("                FahrtKostenrechner");
+    Console.WriteLine("                Fahrtkostenrechner");
     Console.WriteLine();
 while (!temp)
 {
@@ -22,11 +21,12 @@ while (!temp)
     }
     else if (answer == "j")
     {
-        int kosten = (int)(minuten * 0.25);
+        double kosten = (minuten * 0.25 + 1);
         temp = true;
         Console.WriteLine("Für eine Fahrt von " + minuten + " zahlen Sie:");
-        Console.WriteLine(kosten + " Euro");
+        Console.WriteLine(kosten.ToString("0.00") + " Euro");
     }
-
+    Console.WriteLine();
+    Console.WriteLine("Drücken Sie eine Taste, um die Anwendung zu beenden.");
     Console.ReadKey();
 }
