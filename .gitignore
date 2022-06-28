@@ -1,10 +1,4 @@
 /Fahrtkostenrechner/obj/Debug
-/Fahrtkostenrechner/obj/Debug/net6.0/
-/Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.GeneratedMSBuildEditorConfig.editorconfig
-/Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.assets.cache
-/Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.csproj.AssemblyReference.cache
-/Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.GeneratedMSBuildEditorConfig.editorconfig
-/Fahrtkostenrechner/bin/Debug
 /Fahrtkostenrechner/obj
 .idea
 .vs
@@ -15,3 +9,15 @@ Fahrtkostenrechner/obj/project.nuget.cache
 Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.assets.cache
 Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.csproj.AssemblyReference.cache
 Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.GeneratedMSBuildEditorConfig.editorconfig
+*.editorconfig
+*.cache
+Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.assets.cache
+Fahrtkostenrechner/bin/Debug/net6.0/Newtonsoft.Json.dll
+Fahrtkostenrechner/bin/Debug/net6.0/Fahrtkostenrechner.runtimeconfig.json
+Fahrtkostenrechner/bin/Debug/net6.0/Fahrtkostenrechner.pdb
+Fahrtkostenrechner/bin/Debug/net6.0/Fahrtkostenrechner.dll
+Fahrtkostenrechner/bin/Debug/net6.0/Fahrtkostenrechner.deps.json
+Fahrtkostenrechner/bin/Debug/net6.0/Settings.json
+Fahrtkostenrechner/bin/Debug/net6.0/Fahrtkostenrechner
+Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.assets.cache
+Fahrtkostenrechner/obj/Debug/net6.0/Fahrtkostenrechner.assets.cache
