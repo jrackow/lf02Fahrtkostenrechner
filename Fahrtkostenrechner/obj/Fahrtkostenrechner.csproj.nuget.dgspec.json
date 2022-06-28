@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj": {}
+    "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj": {}
   },
   "projects": {
-    "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj": {
+    "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
+        "projectUniqueName": "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
         "projectName": "Fahrtkostenrechner",
-        "projectPath": "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
+        "projectPath": "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
         "packagesPath": "/Users/jolenrackow/.nuget/packages/",
-        "outputPath": "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/obj/",
+        "outputPath": "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jolenrackow/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2-beta1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }

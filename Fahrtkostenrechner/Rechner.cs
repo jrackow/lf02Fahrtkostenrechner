@@ -1,9 +1,18 @@
+using Fahrtkostenrechner.Model;
+
 namespace Fahrtkostenrechner;
 public class Rechner
 {
+    private Settings Settings;
+    public Rechner(Model.Settings settings)
+    {
+        Settings = settings;
+    }
     public void start()
     {
-        Console.WriteLine("                Fahrtkostenrechner");
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine("                [Fahrtkostenrechner]");
         Console.WriteLine();
 
     eingabe:
@@ -37,7 +46,7 @@ public class Rechner
     }
     void rechner(int time)
     {
-        double kosten = (time * 0.25 + 1);
+        double kosten = (time * Settings.FahrtpreisProKilometer + Settings.Entsperrungskosten);
         Console.WriteLine("Für eine Fahrt von " + time + " zahlen Sie:");
         Console.WriteLine(kosten.ToString("0.00") + " Euro");
     }

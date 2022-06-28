@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TB6IpwYC18Pg2e1JQ5Ino5+0UTbmh6xevaIVfiledE0Htb9qDqqRveuS7dkJBic6qzJTGuqyPCG7ZXvjZ28/NQ==",
+  "dgSpecHash": "6QRCcFi0plQHNzc8WurSsrqsHvwhNR1QBfmzGBizhKrfdmD/XfbzbeIPCr/XV0Rm67G73IaYDI5QWrhTBxY5VA==",
   "success": true,
-  "projectFilePath": "/Users/jolenrackow/Projects/Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/jolenrackow/coding/lf02Fahrtkostenrechner/Fahrtkostenrechner/Fahrtkostenrechner.csproj",
+  "expectedPackageFiles": [
+    "/Users/jolenrackow/.nuget/packages/newtonsoft.json/13.0.2-beta1/newtonsoft.json.13.0.2-beta1.nupkg.sha512"
+  ],
   "logs": []
 }
