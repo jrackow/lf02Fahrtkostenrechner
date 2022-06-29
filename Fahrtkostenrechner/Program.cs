@@ -1,7 +1,16 @@
 ﻿using Fahrtkostenrechner;
 
-//Größe der Konsole wird festgelegt 
-Console.SetWindowSize(55, 30);
+// Nur auf Windows supported
+try
+{
+    //Größe der Konsole wird festgelegt 
+    Console.SetWindowSize(55, 30);
+}
+catch (System.PlatformNotSupportedException e)
+{
+    
+}
+
 
 // Erstellt Objekte für das Management und den Rechner
 Management management = new Management();
