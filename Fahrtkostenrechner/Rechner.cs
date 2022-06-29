@@ -58,7 +58,7 @@ public class Rechner
     }
     
     // Berechnet des Fahrpreis mithilfe der gefahrenen Zeit.
-    void BerechneFahrpreis(int time)
+    private void BerechneFahrpreis(int time)
     {
         double kosten = (time * _settings.FahrtpreisProMinute + _settings.Entsperrungskosten);
         Console.WriteLine("Für eine Fahrt von " + time + " zahlen Sie:");

@@ -29,7 +29,7 @@ public class Management
         }
     }
     // Erstellt eine Settings.json Datei aus dem mitgegebenen Settings Objekt
-    void createJSON(Model.Settings settings)
+    private void createJSON(Model.Settings settings)
     {
         JsonSerializer serializer = new JsonSerializer();
         serializer.NullValueHandling = NullValueHandling.Ignore;
@@ -42,7 +42,7 @@ public class Management
     }
     // Läd das Settings Objekt aus der Settings.json Datei
     // Überschreibt das Settings Objekt der Klasse (Management)
-    void loadJSON()
+    private void loadJSON()
     {
         using (StreamReader file = File.OpenText(@"Settings.json"))
         {
