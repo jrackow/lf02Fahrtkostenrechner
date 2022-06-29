@@ -3,11 +3,12 @@ using Fahrtkostenrechner.Model;
 namespace Fahrtkostenrechner;
 public class Rechner
 {
-    private Settings Settings;
+    private readonly Settings _settings;
     public Rechner(Model.Settings settings)
     {
-        Settings = settings;
+        _settings = settings;
     }
+    // Startet den Fahrtkostenrechner und fragt die Fahrtzeit ab.
     public void start()
     {
         Console.WriteLine();
@@ -38,15 +39,17 @@ public class Rechner
                 Console.WriteLine("Eingabe unbekannt");
                 goto abfrage;
         }
-        rechner(minuten);
+        BerechneFahrpreis(minuten);
 
         Console.WriteLine();
         Console.WriteLine("Drücken Sie eine Taste, um die Anwendung zu beenden.");
         Console.ReadKey();
     }
-    void rechner(int time)
+    
+    // Berechnet des Fahrpreis mithilfe der gefahrenen Zeit.
+    void BerechneFahrpreis(int time)
     {
-        double kosten = (time * Settings.FahrtpreisProKilometer + Settings.Entsperrungskosten);
+        double kosten = (time * _settings.FahrtpreisProMinute + _settings.Entsperrungskosten);
         Console.WriteLine("Für eine Fahrt von " + time + " zahlen Sie:");
         Console.WriteLine(kosten.ToString("0.00") + " Euro");
     }

@@ -19,7 +19,7 @@ public class Management
             // Setzt Default Werte
             Settings = new Settings();
             Settings.Entsperrungskosten = 1.0;
-            Settings.FahrtpreisProKilometer = 0.25;
+            Settings.FahrtpreisProMinute = 0.25;
                 
             //Erstellt die Settings.json
             createJSON(Settings);  
