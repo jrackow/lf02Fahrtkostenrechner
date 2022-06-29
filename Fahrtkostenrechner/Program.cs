@@ -6,10 +6,7 @@ try
     //Größe der Konsole wird festgelegt 
     Console.SetWindowSize(55, 30);
 }
-catch (System.PlatformNotSupportedException e)
-{
-    
-}
+catch (System.PlatformNotSupportedException e) {}
 
 
 // Erstellt Objekte für das Management und den Rechner

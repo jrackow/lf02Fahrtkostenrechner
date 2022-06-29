@@ -23,7 +23,7 @@ public class Rechner
         {
             minuten = Convert.ToInt32(Console.ReadLine());
         }
-        catch (System.FormatException e)
+        catch (FormatException e)
         {  
             Console.WriteLine("[Fehler] Geben Sie eine Zahl ein um fortzufahren!");
             Console.WriteLine("");

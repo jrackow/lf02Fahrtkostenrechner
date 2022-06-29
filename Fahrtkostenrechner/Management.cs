@@ -32,21 +32,19 @@ public class Management
         JsonSerializer serializer = new JsonSerializer();
         serializer.NullValueHandling = NullValueHandling.Ignore;
 
-        using (StreamWriter sw = new StreamWriter(@"Settings.json"))
-        using (JsonWriter writer = new JsonTextWriter(sw))
-        {
-            serializer.Serialize(writer, Settings);
-        }
+        StreamWriter sw = new StreamWriter(@"Settings.json");
+        JsonWriter writer = new JsonTextWriter(sw); 
+        
+        serializer.Serialize(writer, Settings);
     }
     // Läd das Settings Objekt aus der Settings.json Datei
     // Überschreibt das Settings Objekt der Klasse (Management)
     private void loadJSON()
     {
-        using (StreamReader file = File.OpenText(@"Settings.json"))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            Settings output = (Settings)serializer.Deserialize(file, typeof(Settings));
-            Settings = output;
-        }
+        StreamReader file = File.OpenText(@"Settings.json");
+        JsonSerializer serializer = new JsonSerializer();
+        
+        Settings output = (Settings)serializer.Deserialize(file, typeof(Settings));
+        Settings = output;
     }
 }
