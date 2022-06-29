@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using Fahrtkostenrechner.Model;
 using Newtonsoft.Json;
 
@@ -8,6 +10,7 @@ public class Management
     public Settings Settings;
     public Management()
     {
+        // Überprüft ob die Settings.json schon existiert
         if(File.Exists("Settings.json"))
         {
             //Läd die Settings.json in das Settings Objekt
@@ -25,7 +28,7 @@ public class Management
             createJSON(Settings);  
         }
     }
-
+    // Erstellt eine Settings.json Datei aus dem mitgegebenen Settings Objekt
     void createJSON(Model.Settings settings)
     {
         JsonSerializer serializer = new JsonSerializer();
@@ -37,7 +40,8 @@ public class Management
             serializer.Serialize(writer, Settings);
         }
     }
-
+    // Läd das Settings Objekt aus der Settings.json Datei
+    // Überschreibt das Settings Objekt der Klasse (Management)
     void loadJSON()
     {
         using (StreamReader file = File.OpenText(@"Settings.json"))

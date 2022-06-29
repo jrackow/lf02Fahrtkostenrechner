@@ -1,3 +1,4 @@
+using System;
 using Fahrtkostenrechner.Model;
 
 namespace Fahrtkostenrechner;
@@ -18,8 +19,18 @@ public class Rechner
 
     eingabe:
         Console.WriteLine("Bitte geben Sie die geplante Fahrtzeit in Minuten an:");
-
-        int minuten = Convert.ToInt32(Console.ReadLine());
+        int minuten;
+        try
+        {
+            minuten = Convert.ToInt32(Console.ReadLine());
+        }
+        catch (System.FormatException e)
+        {  
+            Console.WriteLine("[Fehler] Geben Sie eine Zahl ein um fortzufahren!");
+            Console.WriteLine("");
+            goto eingabe;
+        }
+        
 
     abfrage:
         Console.WriteLine("Sie wollen " + minuten + " Minuten fahren, korrekt?");
@@ -37,7 +48,7 @@ public class Rechner
                 break;
             default:
                 Console.WriteLine("Eingabe unbekannt");
-                goto abfrage;
+                goto eingabe;
         }
         BerechneFahrpreis(minuten);
 
