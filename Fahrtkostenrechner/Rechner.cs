@@ -1,11 +1,10 @@
-using System;
 using Fahrtkostenrechner.Model;
 
 namespace Fahrtkostenrechner;
 public class Rechner
 {
     private readonly Settings _settings;
-    public Rechner(Model.Settings settings)
+    public Rechner(Settings settings)
     {
         _settings = settings;
     }

@@ -1,5 +1,3 @@
-using System;
-using System.IO;
 using Fahrtkostenrechner.Model;
 using Newtonsoft.Json;
 
@@ -25,11 +23,11 @@ public class Management
             Settings.FahrtpreisProMinute = 0.25;
                 
             //Erstellt die Settings.json
-            createJSON(Settings);  
+            createJSON();  
         }
     }
-    // Erstellt eine Settings.json Datei aus dem mitgegebenen Settings Objekt
-    private void createJSON(Model.Settings settings)
+    // Erstellt eine Settings.json Datei aus dem Settings Objekt der Klasse
+    private void createJSON()
     {
         JsonSerializer serializer = new JsonSerializer();
         serializer.NullValueHandling = NullValueHandling.Ignore;
@@ -47,7 +45,7 @@ public class Management
         using (StreamReader file = File.OpenText(@"Settings.json"))
         {
             JsonSerializer serializer = new JsonSerializer();
-            Model.Settings output = (Model.Settings)serializer.Deserialize(file, typeof(Model.Settings));
+            Settings output = (Settings)serializer.Deserialize(file, typeof(Settings));
             Settings = output;
         }
     }
