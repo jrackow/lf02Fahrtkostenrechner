@@ -5,7 +5,7 @@ namespace Fahrtkostenrechner;
 
 public class Verwaltung
 {
-    public Einstellungen Einstellungen;
+    public Einstellungen einstellungen;
     public Verwaltung()
     {
         // Überprüft ob die Settings.json schon existiert
@@ -18,9 +18,9 @@ public class Verwaltung
         else
         {
             // Setzt Default Werte
-            Einstellungen = new Einstellungen();
-            Einstellungen.entsperrungskosten = 1.0;
-            Einstellungen.fahrtpreisprominute = 0.25;
+            einstellungen = new Einstellungen();
+            einstellungen.entsperrungskosten = 1.0;
+            einstellungen.fahrtpreisprominute = 0.25;
                 
             //Erstellt die Settings.json
             CreateJSON();  
@@ -35,7 +35,7 @@ public class Verwaltung
         StreamWriter sw = new StreamWriter(@"Settings.json");
         JsonWriter writer = new JsonTextWriter(sw); 
         
-        serializer.Serialize(writer, Einstellungen);
+        serializer.Serialize(writer, einstellungen);
     }
     // Lädt das Settings Objekt aus der Settings.json Datei
     // Überschreibt das Settings Objekt der Klasse (Management)
@@ -43,6 +43,6 @@ public class Verwaltung
     {
         StreamReader file = File.OpenText(@"Settings.json");
         JsonSerializer serializer = new JsonSerializer(); 
-        Einstellungen = (Einstellungen)serializer.Deserialize(file, typeof(Einstellungen));
+        einstellungen = (Einstellungen)serializer.Deserialize(file, typeof(Einstellungen));
     }
 }
