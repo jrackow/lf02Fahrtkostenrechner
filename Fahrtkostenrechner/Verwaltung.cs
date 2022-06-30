@@ -19,8 +19,8 @@ public class Verwaltung
         {
             // Setzt Default Werte
             Einstellungen = new Einstellungen();
-            Einstellungen.Entsperrungskosten = 1.0;
-            Einstellungen.FahrtpreisProMinute = 0.25;
+            Einstellungen.entsperrungskosten = 1.0;
+            Einstellungen.fahrtpreisprominute = 0.25;
                 
             //Erstellt die Settings.json
             CreateJSON();  
