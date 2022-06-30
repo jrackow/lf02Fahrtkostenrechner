@@ -9,7 +9,7 @@ public class Rechner
         _settings = settings;
     }
     // Startet den Fahrtkostenrechner und fragt die Fahrtzeit ab.
-    public void start()
+    public void Start()
     {
         Console.WriteLine();
         Console.WriteLine();
@@ -58,10 +58,10 @@ public class Rechner
         Console.WriteLine();
         Console.WriteLine("Drücken sie 'J' für Ja oder 'N' für Nein");
 
-        var answer = Console.ReadLine();
+        string antwort = Console.ReadLine();
 
         //Prüfung der Antwortmöglichkeiten. 
-        switch (answer.ToLower())
+        switch (antwort.ToLower())
         {
             //Bei "N" kann der Benutzer eine erneute Eingabe tätigen.
             case "n":
