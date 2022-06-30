@@ -20,7 +20,7 @@ public class Rechner
 
         double entsperrungskosten = (_einstellungen.Entsperrungskosten);
         double fahrtpreisprominute = (_einstellungen.FahrtpreisProMinute);
-        Console.WriteLine("Der Preis setzt sich aus " + entsperrungskosten.ToString("0.00") + " Euro Entsperrungskosten " + fahrtpreisprominute.ToString("0.00") + " Euro pro angebrochener Minute zusammen.");
+        Console.WriteLine("Der Preis setzt sich aus " + entsperrungskosten.ToString("0.00") + " Euro Entsperrungskosten + " + fahrtpreisprominute.ToString("0.00") + " Euro pro angebrochener Minute zusammen.");
     eingabe:
         Console.WriteLine("Bitte geben Sie die geplante Fahrtzeit in Minuten an. Beachten sie die maximale Nutzungsdauer von 200 Minuten:");
         int minuten;
