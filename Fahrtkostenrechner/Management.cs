@@ -37,7 +37,7 @@ public class Management
         
         serializer.Serialize(writer, Settings);
     }
-    // Läd das Settings Objekt aus der Settings.json Datei
+    // Lädt das Settings Objekt aus der Settings.json Datei
     // Überschreibt das Settings Objekt der Klasse (Management)
     private void loadJSON()
     {
