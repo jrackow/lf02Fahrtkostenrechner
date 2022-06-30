@@ -19,6 +19,7 @@ public class Rechner
         Console.WriteLine();
 
     eingabe:
+        Console.WriteLine("Der Preis setzt sich aus einem Euro Entsperrungskosten + 0.25 Euro pro angebrochener Minute zusammen.");
         Console.WriteLine("Bitte geben Sie die geplante Fahrtzeit in Minuten an. Beachten sie die maximale Nutzungsdauer von 200 Minuten:");
         int minuten;
         //Prüfung, ob eine Ganzzahl eingegeben wurde.
