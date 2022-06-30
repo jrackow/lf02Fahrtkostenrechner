@@ -3,10 +3,10 @@ using Newtonsoft.Json;
 
 namespace Fahrtkostenrechner;
 
-public class Management
+public class Verwaltung
 {
-    public Settings Settings;
-    public Management()
+    public Einstellungen Einstellungen;
+    public Verwaltung()
     {
         // Überprüft ob die Settings.json schon existiert
         if(File.Exists(@"Settings.json"))
@@ -18,9 +18,9 @@ public class Management
         else
         {
             // Setzt Default Werte
-            Settings = new Settings();
-            Settings.Entsperrungskosten = 1.0;
-            Settings.FahrtpreisProMinute = 0.25;
+            Einstellungen = new Einstellungen();
+            Einstellungen.Entsperrungskosten = 1.0;
+            Einstellungen.FahrtpreisProMinute = 0.25;
                 
             //Erstellt die Settings.json
             CreateJSON();  
@@ -35,7 +35,7 @@ public class Management
         StreamWriter sw = new StreamWriter(@"Settings.json");
         JsonWriter writer = new JsonTextWriter(sw); 
         
-        serializer.Serialize(writer, Settings);
+        serializer.Serialize(writer, Einstellungen);
     }
     // Lädt das Settings Objekt aus der Settings.json Datei
     // Überschreibt das Settings Objekt der Klasse (Management)
@@ -43,6 +43,6 @@ public class Management
     {
         StreamReader file = File.OpenText(@"Settings.json");
         JsonSerializer serializer = new JsonSerializer(); 
-        Settings = (Settings)serializer.Deserialize(file, typeof(Settings));
+        Einstellungen = (Einstellungen)serializer.Deserialize(file, typeof(Einstellungen));
     }
 }

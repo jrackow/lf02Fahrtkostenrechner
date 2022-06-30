@@ -1,6 +1,6 @@
 namespace Fahrtkostenrechner.Model;
 
-public class Settings
+public class Einstellungen
 {
     public double FahrtpreisProMinute;
     public double Entsperrungskosten;
