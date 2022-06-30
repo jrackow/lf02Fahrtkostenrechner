@@ -3,10 +3,10 @@ using Fahrtkostenrechner.Model;
 namespace Fahrtkostenrechner;
 public class Rechner
 {
-    private readonly Einstellungen _einstellungen;
+    private readonly Einstellungen einstellungen;
     public Rechner(Einstellungen einstellungen)
     {
-        _einstellungen = einstellungen;
+        this.einstellungen = einstellungen;
     }
     // Startet den Fahrtkostenrechner und fragt die Fahrtzeit ab.
     public void Start()
@@ -18,8 +18,8 @@ public class Rechner
         Console.WriteLine(s);
         Console.WriteLine();
 
-        double entsperrungskosten = (_einstellungen.Entsperrungskosten);
-        double fahrtpreisprominute = (_einstellungen.FahrtpreisProMinute);
+        double entsperrungskosten = (einstellungen.Entsperrungskosten);
+        double fahrtpreisprominute = (einstellungen.FahrtpreisProMinute);
         Console.WriteLine("Der Preis setzt sich aus " + entsperrungskosten.ToString("0.00") + " Euro Entsperrungskosten + " + fahrtpreisprominute.ToString("0.00") + " Euro pro angebrochener Minute zusammen.");
     eingabe:
         Console.WriteLine("Bitte geben Sie die geplante Fahrtzeit in Minuten an. Beachten sie die maximale Nutzungsdauer von 200 Minuten:");
@@ -88,7 +88,7 @@ public class Rechner
     // Berechnet des Fahrpreis mithilfe der gefahrenen Zeit.
     private void BerechneFahrpreis(int fahrzeit)
     {
-        double kosten = (fahrzeit * _einstellungen.FahrtpreisProMinute + _einstellungen.Entsperrungskosten);
+        double kosten = (fahrzeit * einstellungen.FahrtpreisProMinute + einstellungen.Entsperrungskosten);
         Console.WriteLine("Für eine Fahrt von " + fahrzeit + " Minuten zahlen Sie:");
         Console.WriteLine(kosten.ToString("0.00") + " Euro");
     }
